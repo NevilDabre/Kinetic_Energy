@@ -1,0 +1,23 @@
+﻿<Window x:Name="Kinetic_Energy" x:Class="Kinetic_Energy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Kinetic Energy" Height="350" Width="525" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Content="Enter Mass =" Grid.Row="0"/>
+        <Label Content="Enter velocity =" Grid.Row="1"/>
+        <Label Content="KE =" Grid.Row="2"/>
+        <TextBox Name="txtMass" Text="{Binding Mass,UpdateSourceTrigger=PropertyChanged}" Grid.Row="0" Grid.Column="1" Margin="10"/>
+        <TextBox Name="txtVelocity" Text="{Binding Velocity, UpdateSourceTrigger=PropertyChanged}" Grid.Row="1" Grid.Column="1" Margin="10"/>
+        <TextBox Name="txtKE" Text="{Binding KE,UpdateSourceTrigger=PropertyChanged}" Grid.Row="2" Grid.Column="1" Margin="10"/>
+    </Grid>
+</Window>
